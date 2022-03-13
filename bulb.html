@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bulb.css" />
+    <title>Switch-Bulb</title>
+  </head>
+  <body>
+    <div>
+      <img id="image" src="./Assets/Off2 (3).jpg" alt="" />
+    </div>
+    <button id="toggle-btn">Turn On</button>
+    <script>
+      const imgi = document.getElementById("image");
+      const toggle = document.getElementById("toggle-btn");
+      toggle.addEventListener("click", toggles);
+      function toggles() {
+        if (toggle.textContent.includes("On")) {
+          toggle.textContent = "Turn Off";
+          imgi.src = "./Assets/On2.jpg";
+        } else {
+          toggle.textContent = "Turn On";
+          imgi.src = "./Assets/Off2 (3).jpg";
+        }
+      }
+    </script>
+  </body>
+</html>
